@@ -1,6 +1,6 @@
 ## Script to run xapblr locally
 
-Will create a directorly `./data` to store data between container restarts
+Will create a directory `./data` to store data between container restarts
 
 ### to run
 
