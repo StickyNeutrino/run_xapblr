@@ -15,3 +15,5 @@ Will create a directory `./data` to store data between container restarts
 5) run `start.sh`
 
 6) follow prompts
+
+7) open `127.0.0.1:5000` in a web browser 
