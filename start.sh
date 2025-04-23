@@ -5,10 +5,20 @@ while true; do
 
     case $source_yn in
     [Yy]* )
+        if [ -d "xapblr" ]; 
+        then
+            cd xapblr
+            git pull
+        else 
+            git clone https://github.com/StickyNeutrino/xapblr xapblr
+            cd xapblr
+        fi 
+
         echo "building container..."
-        if cd xapblr; then git pull; else git clone https://github.com/StickyNeutrino/xapblr repo; fi 
-        docker build ./xapblr -t xapblr
+
+        docker build . -t xapblr || exit -1
         container=xapblr
+        cd ..
         break;;
     [Nn]* )
         container=dfitchmun/xapblr
