@@ -29,10 +29,8 @@ while true; do
     esac
 done
 
-read -p "Enter your blog's url: " BLOG_URL
-
 docker run \
--e BLOG_URL=$BLOG_URL \
+-v ./blogs.txt:/home/xapblr/blogs.txt \
 -v ./data:/home/xapblr/.local/share/xapblr \
 -v ./APIKEY.json:/home/xapblr/.config/xapblr/APIKEY \
 -p 127.0.0.1:5000:5000 \
