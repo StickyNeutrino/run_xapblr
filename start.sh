@@ -37,6 +37,7 @@ docker run \
 -v ./APIKEY.json:/home/xapblr/.config/xapblr/APIKEY \
 -p 127.0.0.1:5000:5000 \
 -d \
+--platform linux/amd64 \
 --name xapblr \
 $container
 
