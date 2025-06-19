@@ -32,7 +32,7 @@ done
 docker run \
 -v ./blogs.txt:/home/xapblr/blogs.txt \
 -v ./data:/home/xapblr/.local/share/xapblr \
--v ./APIKEY.json:/home/xapblr/.config/xapblr/APIKEY \
+-v ./APIKEY.json:/root/.config/xapblr/APIKEY \
 -p 127.0.0.1:5000:5000 \
 -d \
 --platform linux/amd64 \
